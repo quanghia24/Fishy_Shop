@@ -1,3 +1,6 @@
+To create a superuser
+- python3 manage.py createsuperuser
+
 Virtual environment
 - python3 -m venv env
 - [or using] virtualenv env
