@@ -1,0 +1,45 @@
+.banner {
+    background-image: url('../../../public/images/banner2.png'); /* Thay link bằng hình ảnh banner thực tế */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(46, 45, 45, 0.5); /* Hiệu ứng nền mờ */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .banner-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #030303;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .banner-button:hover {
+    background-color: #ff7e72;
+  }
+  

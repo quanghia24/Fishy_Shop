@@ -13,6 +13,8 @@ import { PaginationControl } from "react-bootstrap-pagination-control";
 import Loader from "../components/loader.jsx";
 import ProductCarousel from "./../components/product-carousel";
 
+import Banner from "../components/Banner/banner.jsx";
+import Download from "../components/Download/download.jsx";
 const HomeScreen = () => {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
@@ -33,15 +35,18 @@ const HomeScreen = () => {
     }, [dispatch, keyword, pageQuery]);
 
     return (
-        <div>
+        <div id="home">
+           
             {!keyword && <ProductCarousel />}
-            <h1>Latest Products</h1>
+            <Banner/>
+            <h1 id='product'>Latest Products</h1>
             {loading ? (
                 <Loader />
             ) : error ? (
                 <Message variant="danger">{error}</Message>
             ) : (
-                <div>
+                <div >
+                   
                     <Row>
                         {products.map((product) => {
                             return (
@@ -56,6 +61,7 @@ const HomeScreen = () => {
                                 </Col>
                             );
                         })}
+                    
                     </Row>
                     {/* <Paginate page={page} pages={pages} keyword={keyword}/> */}
                     {pages > 1 && (
@@ -76,6 +82,9 @@ const HomeScreen = () => {
                     )}
                 </div>
             )}
+           
+            <Download/>
+            
         </div>
     );
 };

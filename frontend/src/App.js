@@ -5,8 +5,8 @@ import WebFont from "webfontloader";
 import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 import HomeScreen from "./screen/home-screen";
 import ProductScreen from "./screen/product-screen";
 import CartScreen from "./screen/cart-screen";

@@ -1,0 +1,84 @@
+/* Sticky Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: #1a1918; /* Bootstrap dark background */
+  }
+  
+  /* Navbar Style */
+  .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .logo{
+    color: white;
+    font-size: 25px;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff6f61; /* Change color on hover */
+  }
+  
+  /* Search and Cart */
+  .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .search-cart .fa-cart-shopping {
+    margin-right: 0.5rem;
+    color: white;
+  }
+  
+  .search-cart .fa-user {
+    margin-right: 0.5rem;
+    color: white;
+  }
+  /* Dropdown Menu */
+  .navbar-nav .dropdown-menu {
+    background-color: #343a40;
+    color: white;
+  
+  }
+  
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: white;
+  }
+  
+  .navbar-nav
+  {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .button-context{
+   
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    font-weight:500;
+  }

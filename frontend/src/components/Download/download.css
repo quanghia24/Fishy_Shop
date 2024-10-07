@@ -1,0 +1,59 @@
+.app-download-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-download-left {
+    max-width: 50%;
+  }
+  
+  .app-download-left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .app-download-left p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .download-buttons img {
+    margin-right: 20px;
+    cursor: pointer;
+    width: 200px; /* Adjust size if needed */
+  }
+  .download-buttons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .app-download-right .phone-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .app-download-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .app-download-left {
+      max-width: 100%;
+    }
+  
+    .download-buttons img {
+      margin-bottom: 20px;
+      width: 130px; /* Adjust size for mobile */
+    }
+  
+    .app-download-right {
+      margin-top: 20px;
+    }
+  }
+  

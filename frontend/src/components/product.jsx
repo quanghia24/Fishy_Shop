@@ -4,7 +4,8 @@ import Rating from "./rating";
 
 const Product = ({ product }) => {
     return (
-        <Card
+        <Card 
+           
             className="product-container mt-3 p-3 rounded"
             style={{ fontFamily: "Shantell Sans" }}
         >
