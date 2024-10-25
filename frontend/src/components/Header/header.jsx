@@ -70,7 +70,7 @@ const Header = () => {
                                 </LinkContainer>
                                 {userInfo ? (
                                     <NavDropdown
-                                        title={capitalizeFirstLetter(userInfo.name)}
+                                        title={<span className="text-white fw-bold">{capitalizeFirstLetter(userInfo.name)}</span>}
                                         id="username"
                                     >
                                         <LinkContainer to="/profile">
@@ -88,7 +88,7 @@ const Header = () => {
                                     </LinkContainer>
                                 )}
                                 {userInfo && userInfo.isAdmin && (
-                                    <NavDropdown title="Admin" id="adminmenu">
+                                    <NavDropdown title={<span className="text-white fw-bold">Admin</span>} id="adminmenu">
                                         <LinkContainer to="/admin/userlist">
                                             <NavDropdown.Item>Users</NavDropdown.Item>
                                         </LinkContainer>
