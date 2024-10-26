@@ -46,14 +46,11 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="nav-links">
-                            <button onClick={() => scrollToSection('home')} className="nav-link">
+                            <button onClick={() => {navigate("/")}} className="nav-link">
                                 <p className="button-context">Home</p>
                             </button>
-                            <button onClick={() => scrollToSection('product')} className="nav-link">
+                            <button onClick={() => {navigate("/");scrollToSection('product')}} className="nav-link">
                                 <p className="button-context">Product</p>
-                            </button>
-                            <button onClick={() => scrollToSection('download')} className="nav-link">
-                                <p className="button-context">Download</p>
                             </button>
                             <button onClick={() => scrollToSection('footer')} className="nav-link">
                                 <p className="button-context">Contact Us</p>
@@ -70,7 +67,7 @@ const Header = () => {
                                 </LinkContainer>
                                 {userInfo ? (
                                     <NavDropdown
-                                        title={capitalizeFirstLetter(userInfo.name)}
+                                        title={<span className="text-white fw-bold">{capitalizeFirstLetter(userInfo.name)}</span>}
                                         id="username"
                                     >
                                         <LinkContainer to="/profile">
@@ -88,7 +85,7 @@ const Header = () => {
                                     </LinkContainer>
                                 )}
                                 {userInfo && userInfo.isAdmin && (
-                                    <NavDropdown title="Admin" id="adminmenu">
+                                    <NavDropdown title={<span className="text-white fw-bold">Admin</span>} id="adminmenu">
                                         <LinkContainer to="/admin/userlist">
                                             <NavDropdown.Item>Users</NavDropdown.Item>
                                         </LinkContainer>

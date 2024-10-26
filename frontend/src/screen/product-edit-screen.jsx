@@ -106,7 +106,7 @@ const ProductEditScreen = () => {
                 <Button variant="outline-secondary">Go back</Button>
             </LinkContainer>
             <FormContainer>
-                <h1 className="d-flex justify-content-center">Edit User</h1>
+                <h1 className="d-flex justify-content-center">Edit Product</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && (
                     <Message variant="danger">{errorUpdate.message}</Message>
