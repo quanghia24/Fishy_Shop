@@ -17,3 +17,10 @@ Backnend
 Frontend
 - `npm install`
 - `npm start`
+
+Incase of couldn't resolve dependencíe
+```
+rm -Rf frontend/node_modules && rm frontend/package-lock.json 
+npm cache clean --force
+npm install --force
+```
