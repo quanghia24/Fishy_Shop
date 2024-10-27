@@ -84,17 +84,17 @@ const LoginScreen = () => {
             </Form>
 
             <Row className="py-3">
+                
                 <Col>
-                    New Customer ?{" "}
-                    <Link
-                        to={
-                            redirect
-                                ? `/register?redirect=${redirect}`
-                                : "/register"
-                        }
-                    >
-                        Register
-                    </Link>
+                    <p>New Customer?{" "}
+                        <Button
+                            onClick={() => navigate('/register')}
+                            variant="dark"
+                            style={{ minWidth: "10%" }}
+                        >
+                            Register
+                        </Button>
+                    </p>
                 </Col>
             </Row>
         </FormContainer>
