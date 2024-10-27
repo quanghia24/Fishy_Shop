@@ -122,22 +122,21 @@ const RegisterScreen = () => {
                     className="mt-4"
                     style={{ minWidth: "50%" }}
                 >
-                    Reigster
+                    Register
                 </Button>
             </Form>
 
             <Row className="py-3">
                 <Col>
-                    Have an Account ?{" "}
-                    <Link
-                        to={
-                            redirect
-                                ? `/register?redirect=${redirect}`
-                                : "/login"
-                        }
-                    >
-                        Sign in
-                    </Link>
+                    <p>Have an Account?{" "}
+                        <Button
+                            onClick={() => navigate('/login')}
+                            variant="dark"
+                            style={{ minWidth: "10%" }}
+                        >
+                            Sign in
+                        </Button>
+                    </p>
                 </Col>
             </Row>
         </FormContainer>
