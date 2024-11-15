@@ -86,15 +86,15 @@ const LoginScreen = () => {
             <Row className="py-3">
                 
                 <Col>
-                    <p>New Customer?{" "}
-                        <Button
-                            onClick={() => navigate('/register')}
-                            variant="dark"
-                            style={{ minWidth: "10%" }}
-                        >
-                            Register
-                        </Button>
-                    </p>
+                    <Button
+                        className="bg-white text-black"
+                        onClick={() => navigate('/register')}
+                        variant="dark"
+                        style={{ minWidth: "10%" }}
+
+                    >
+                        New Customer?
+                    </Button>
                 </Col>
             </Row>
         </FormContainer>

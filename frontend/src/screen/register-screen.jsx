@@ -128,15 +128,14 @@ const RegisterScreen = () => {
 
             <Row className="py-3">
                 <Col>
-                    <p>Have an Account?{" "}
-                        <Button
-                            onClick={() => navigate('/login')}
-                            variant="dark"
-                            style={{ minWidth: "10%" }}
-                        >
-                            Sign in
-                        </Button>
-                    </p>
+                    <Button
+                        className="bg-white text-black"
+                        onClick={() => navigate('/login')}
+                        variant="dark"
+                        style={{ minWidth: "10%" }}
+                    >
+                        Have an account already?
+                    </Button>
                 </Col>
             </Row>
         </FormContainer>

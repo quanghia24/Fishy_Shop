@@ -17,7 +17,8 @@ import { useSearchParams, useNavigate, useParams } from "react-router-dom";
 import CheckoutSteps from "../components/checkout";
 import { savePaymentMethod } from "../action/cartAction";
 import { getOrderDetail, payOrder, deliverOrder } from "../action/orderAction";
-import { PayPalButton } from "react-paypal-button-v2";
+// import { PayPalButtons } from "react-paypal-js";
+
 import {
     ORDER_PAY_RESET,
     ORDER_DELIVER_RESET,
@@ -84,8 +85,10 @@ const OrderScreen = () => {
     }, [order, id, dispatch, successPay, successDeliver, navigate, userInfo]);
 
     const successPaymentHandler = (paymentResult) => {
-        dispatch(payOrder(id, paymentResult));
+        dispatch(payOrder(id, true));
     };
+
+
 
     const deliverHandler = () => {
         dispatch(deliverOrder(order));
@@ -265,10 +268,13 @@ const OrderScreen = () => {
                                     {!sdkReady ? (
                                         <Loader />
                                     ) : (
-                                        <PayPalButton
-                                            amount={order.totalPrice}
-                                            onSuccess={successPaymentHandler}
-                                        />
+                                        <button className="bg-warning fw-bold rounded w-75 h4" onClick={successPaymentHandler}>
+                                            Pay
+                                        </button>
+                                        // <PayPalButtons
+                                        //     amount={order.totalPrice}
+                                        //     onSuccess={successPaymentHandler}
+                                        // />
                                     )}
                                 </ListGroup.Item>
                             )}

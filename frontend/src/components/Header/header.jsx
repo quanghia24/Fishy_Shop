@@ -62,7 +62,8 @@ const Header = () => {
                             <Nav>
                                 <LinkContainer to="/cart">
                                     <Nav.Link>
-                                        <i className="fa-solid fa-cart-shopping"></i> <p className="button-context">Cart</p>
+                                        <i className="fa-solid fa-cart-shopping"></i>
+                                         {/* <p className="button-context">Cart</p> */}
                                     </Nav.Link>
                                 </LinkContainer>
                                 {userInfo ? (
@@ -70,9 +71,11 @@ const Header = () => {
                                         title={<span className="text-white fw-bold">{capitalizeFirstLetter(userInfo.name)}</span>}
                                         id="username"
                                     >
-                                        <LinkContainer to="/profile">
-                                            <NavDropdown.Item>Profile</NavDropdown.Item>
-                                        </LinkContainer>
+                                        <NavDropdown.Item>
+                                            <LinkContainer to="/profile">
+                                                <p className="button-context">Profile</p>
+                                            </LinkContainer>
+                                        </NavDropdown.Item>
                                         <NavDropdown.Item onClick={logoutHandler}>
                                             <p className="button-context">Logout</p>
                                         </NavDropdown.Item>
@@ -80,7 +83,8 @@ const Header = () => {
                                 ) : (
                                     <LinkContainer to="/login">
                                         <Nav.Link>
-                                            <i className="fa-solid fa-user"></i> <p className="button-context">Login</p>
+                                            <i className="fa-solid fa-user"></i> 
+                                            {/* <p className="button-context">Login</p> */}
                                         </Nav.Link>
                                     </LinkContainer>
                                 )}
