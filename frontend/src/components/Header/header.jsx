@@ -62,8 +62,8 @@ const Header = () => {
                             <Nav>
                                 <LinkContainer to="/cart">
                                     <Nav.Link>
-                                        <i className="fa-solid fa-cart-shopping"></i>
-                                         {/* <p className="button-context">Cart</p> */}
+                                        {/* <i className="fa-solid fa-cart-shopping">Cart</i> */}
+                                         <p className="button-context">Cart</p>
                                     </Nav.Link>
                                 </LinkContainer>
                                 {userInfo ? (
@@ -83,8 +83,8 @@ const Header = () => {
                                 ) : (
                                     <LinkContainer to="/login">
                                         <Nav.Link>
-                                            <i className="fa-solid fa-user"></i> 
-                                            {/* <p className="button-context">Login</p> */}
+                                            {/* <i className="fa-solid fa-user"></i>  */}
+                                            <p className="button-context">Login</p>
                                         </Nav.Link>
                                     </LinkContainer>
                                 )}

@@ -271,10 +271,6 @@ const OrderScreen = () => {
                                         <button className="bg-warning fw-bold rounded w-75 h4" onClick={successPaymentHandler}>
                                             Pay
                                         </button>
-                                        // <PayPalButtons
-                                        //     amount={order.totalPrice}
-                                        //     onSuccess={successPaymentHandler}
-                                        // />
                                     )}
                                 </ListGroup.Item>
                             )}
